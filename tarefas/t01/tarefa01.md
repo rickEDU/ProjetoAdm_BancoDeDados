@@ -1,5 +1,6 @@
-﻿[Scripts para o esquema relacional](https://github.com/rickEDU/ProjetoAdm_BancoDeDados/blob/main/tarefas_t01_/tarefa01-create.sql)<br/>
-[Scripts para o povoamento do esquema relacional](https://github.com/rickEDU/ProjetoAdm_BancoDeDados/blob/main/tarefas_t01_/tarefa01-inserts.sql)<br/>
+﻿[Scripts para o esquema relacional](https://github.com/rickEDU/ProjetoAdm_BancoDeDados/blob/main/tarefas/t01/tarefa01-create.sql)<br/>
+[Scripts para o povoamento do esquema relacional](https://github.com/rickEDU/ProjetoAdm_BancoDeDados/blob/main/tarefas/t01/tarefa01-inserts.sql)<br/>
+## Respostas da questões
 [Questão 02](https://github.com/rickEDU/ProjetoAdm_BancoDeDados/blob/main/tarefas/t01/tarefa01-q02.sql)<br/>
 [Questão 04](https://github.com/rickEDU/ProjetoAdm_BancoDeDados/blob/main/tarefas/t01/tarefa01-q04.sql)<br/>
 [Questão 06](https://github.com/rickEDU/ProjetoAdm_BancoDeDados/blob/main/tarefas/t01/tarefa01-q06.sql)<br/>
