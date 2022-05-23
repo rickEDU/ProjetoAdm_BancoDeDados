@@ -13,7 +13,7 @@ CREATE TABLE voo(
   tipo VARCHAR(30),
   piloto INT,
   num_passageiros INT,
-  distancia VARCHAR(10),
+  distancia INT,
   FOREIGN KEY (piloto) REFERENCES piloto(codigo));
 
 CREATE TABLE milhas(
