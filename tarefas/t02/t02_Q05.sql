@@ -1,12 +1,12 @@
 CREATE FUNCTION adiciona_voo() 
-RETURNS TRIGGER AS $soma_voo$
+RETURNS TRIGGER AS $$
     BEGIN
         UPDATE piloto
 		SET num_voos = num_voos + 1
-		WHERE codigo = new.piloto;
+		WHERE codigo = NEW.piloto;
 		RETURN NEW;
     END;
-$add_voo$
+$$
 LANGUAGE plpgsql;
 
 CREATE TRIGGER soma_voo
