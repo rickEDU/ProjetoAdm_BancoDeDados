@@ -1,10 +1,10 @@
 CREATE FUNCTION inserir_milhas() 
-RETURNS TRIGGER AS $cartao_milhagem$
+RETURNS TRIGGER AS $$
 BEGIN
   INSERT INTO milhas(cliente, quantidade) 
   VALUES (NEW.codigo, 0);
 END;
-$cartao_milhagem$ LANGUAGE plpgsql;
+$$ LANGUAGE plpgsql;
 
 CREATE TRIGGER cartao_milhagem
     AFTER INSERT ON cliente
