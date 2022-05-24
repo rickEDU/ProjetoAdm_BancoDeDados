@@ -1,12 +1,12 @@
 CREATE FUNCTION adiciona_milhas() 
-RETURNS TRIGGER AS $add_Milhas$
+RETURNS TRIGGER AS $$
     BEGIN
         UPDATE milhas
 		SET quantidade = quantidade + (SELECT v.distancia from voo v, cliente_voo cl where cl.voo=v.codigo)/10
-		WHERE cliente = new.cliente;
+		WHERE cliente = NEW.cliente;
 		RETURN NEW;
     END;
-$add_Milhas$
+$$
 LANGUAGE plpgsql;
 
 CREATE TRIGGER add_Milhas
