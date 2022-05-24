@@ -1,12 +1,12 @@
 CREATE FUNCTION adiciona_passageiros() 
-RETURNS TRIGGER AS $add_Passageiros$
+RETURNS TRIGGER AS $$
     BEGIN
         UPDATE voo
 		SET num_passageiros = num_passageiros + 1
-		WHERE codigo = new.voo;
+		WHERE codigo = NEW.voo;
 		RETURN NEW;
     END;
-$add_Passageiros$
+$$
 LANGUAGE plpgsql;
 
 CREATE TRIGGER add_Passageiros
