@@ -4,10 +4,8 @@ RETURNS TRIGGER AS $soma_voo$
         UPDATE piloto
 		SET num_voos = num_voos + 1
 		WHERE codigo = new.piloto;
-		
 		RETURN NEW;
     END;
-	
 $add_voo$
 LANGUAGE plpgsql;
 

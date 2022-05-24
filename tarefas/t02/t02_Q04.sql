@@ -1,5 +1,5 @@
 CREATE FUNCTION inserir_milhas() 
-RETURNS trigger AS $cartao_milhagem$
+RETURNS TRIGGER AS $cartao_milhagem$
 BEGIN
   INSERT INTO milhas(cliente, quantidade) 
   VALUES (NEW.codigo, 0);
