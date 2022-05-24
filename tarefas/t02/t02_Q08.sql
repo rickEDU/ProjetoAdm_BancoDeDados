@@ -1,11 +1,11 @@
 CREATE FUNCTION deleta_clientes() 
-RETURNS TRIGGER AS $del_Clientes$
+RETURNS TRIGGER AS $$
     BEGIN
         DELETE cliente
 		WHERE codigo IN (SELECT cliente FROM cliente_voo WHERE voo=OLD.codigo);
 		RETURN OLD;
     END;
-$del_Clientes$
+$$
 LANGUAGE plpgsql;
 
 CREATE TRIGGER del_Clientes
@@ -15,13 +15,13 @@ CREATE TRIGGER del_Clientes
 
 
 CREATE FUNCTION deleta_piloto() 
-RETURNS TRIGGER AS $del_Piloto$
+RETURNS TRIGGER AS $$
     BEGIN
         DELETE piloto
 		WHERE codigo=OLD.piloto;
 		RETURN OLD;
     END;
-$del_Piloto$
+$$
 LANGUAGE plpgsql;
 
 CREATE TRIGGER del_Piloto
