@@ -1,12 +1,12 @@
 INSERT INTO milhas(cliente, quantidade) VALUES (1, 20);
   
 CREATE FUNCTION inserir_milhas() 
-RETURNS trigger AS $up_Cliente$
+RETURNS trigger AS $$
 BEGIN
   INSERT INTO milhas(cliente, quantidade) 
   VALUES (NEW.codigo, 0);
 END;
-$up_Cliente$ LANGUAGE plpgsql;
+$$ LANGUAGE plpgsql;
 
 CREATE TRIGGER up_Clientes
     AFTER UPDATE ON cliente
